@@ -5,7 +5,7 @@ Por [Wenderson Wanzeller](https://www.linkedin.com/in/wenderson-wanzeller/)
 1. Um projdeto Django, versão 4.2.5, chamado `setup` está disponível no diretório `src`. 
 2. Utilze o diretório [**`.envs`**] para atualizar suas variáveis de ambiente e configuração django.
 
-## Utilização Básica
+## Instalação Básica
 Clone o repositório de setup:
 ```sh
 git clone https://github.com/wwanzeller/django.git meu-sistema
@@ -18,6 +18,14 @@ cd meu-sistema/
 Remova o versionamento do repositório:
 ```sh
 rm -rf .git/
+```
+Execute o comando:
+```sh
+make up
+```
+Execute o comando:
+```sh
+make build
 ```
 
 ## Comandos utilizando make
