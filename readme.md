@@ -36,7 +36,20 @@ rm -rf .git/
   - **Windows:**
     ```
     .venv\Scripts\activate
-Execute o comando (**na primeira vez e sempre que atualizar o docker-compose**):
+
+Entre no diretório src:
+```sh
+cd src/
+```
+Instale localmente os pacotes do python:
+```sh
+pip install -r requirements.pip
+```
+Volte ao diretório principal do projeto:
+```sh
+cd ..
+```
+Execute o comando (**na primeira vez e sempre que instalar um pacote ou atualizar o docker-compose**):
 ```sh
 make build
 ```
