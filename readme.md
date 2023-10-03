@@ -4,37 +4,7 @@ Por [Wenderson Wanzeller](https://www.linkedin.com/in/wenderson-wanzeller/)
 ## Sobre o projeto
 1. Um projdeto Django, versão 4.2.5, chamado `setup` está disponível no diretório `src`. 
 2. Utilze o diretório `.envs` para atualizar suas variáveis de ambiente e configuração django.
-3. Recomenda-se utilizar um abimente virtual em sua máquina local:
-   
-   Para criar o ambiente virtual, simplesmente execute:
-   - **Linux:** 
-     ```
-     python3 -m venv .venv
-     ```
-   - **Windows:**
-     ```
-     python -m venv .venv
-     ```
-
-   Para ativar o ambiente virtual, simplesmente execute:
-   - **Linux:** 
-     ```
-     source .venv/bin/activate
-     ```
-   - **Windows:**
-     ```
-     .venv\Scripts\activate
-     ```
-
-   Para desativar o ambiente virtual ao parar o projeto, simplesmente execute:
-   - **Linux:**
-     ```
-     deactivate
-     ```
-   - **Windows:**
-     ```
-     .venv\Scripts\deactivate
-     ```
+3. Recomenda-se utilizar um abimente virtual em sua máquina local*.
 
 ## Instalação Básica
 Clone o repositório de setup (substitua `meu-sistema` pelo `nome-seu-projeto`):
@@ -49,6 +19,26 @@ Remova o versionamento do repositório:
 ```sh
 rm -rf .git/
 ```
+*Crie e ative um ambiente virtual local:
+  - **Linux:** 
+    ```sh
+    python3 -m venv .venv
+    ```
+  - **Windows:**
+    ```
+    python -m venv .venv
+    ```
+
+  Para ativar o ambiente virtual, simplesmente execute:
+  - **Linux:** 
+    ```sh
+    source .venv/bin/activate
+    ```
+  - **Windows:**
+    ```cmd
+    .venv\Scripts\activate
+    ``````
+
 Execute o comando:
 ```sh
 make up
@@ -57,6 +47,21 @@ Execute o comando:
 ```sh
 make build
 ```
+
+## Parar projeto
+Execute o comando:
+```sh
+docker-compose down
+```
+Desative o ambiente virtual, simplesmente execute:
+  - **Linux:**
+    ```sh
+    deactivate
+    ```
+  - **Windows:**
+    ```sh
+    .venv\Scripts\deactivate
+    ```
 
 ## Comandos utilizando make
 Você pode rodar os comandos abaixo para utilizar este projeto:
