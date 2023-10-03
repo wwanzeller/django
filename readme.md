@@ -7,13 +7,13 @@ Por [Wenderson Wanzeller](https://www.linkedin.com/in/wenderson-wanzeller/)
 3. Recomenda-se utilizar um abimente virtual em sua máquina local*.
 
 ## Instalação Básica
-Clone o repositório de setup (substitua `meu-sistema` pelo `nome-seu-projeto`):
+Clone o repositório de setup (substitua `meu-sistema` pelo nome do seu projeto):
 ```sh
 git clone https://github.com/wwanzeller/django.git meu-sistema
 ```
 Entre no repositorio:
 ```sh
-cd nome-seu-projeto/
+cd meu-sistema/
 ```
 Remova o versionamento do repositório:
 ```sh
