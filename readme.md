@@ -1,6 +1,9 @@
 # Setup Docker Para Projeto Django com Nginx, Gunicorn, Redis e Postgresql:
 Por [Wenderson Wanzeller](https://www.linkedin.com/in/wenderson-wanzeller/)
 
+Setup de instalação do framwork django, na vesão 4.2.5, utilizando Docker com Nginx, Gunicorn, Redis e Postgresql e pgAdmin.
+O NGINX está configurado com o Gunicorn. E o Redis está sendo utilizado para armazenamento em memória de cache e sessões. 
+
 ## Sobre o projeto
 1. Um projdeto Django, versão 4.2.5, chamado `setup` está disponível no diretório `src`. 
 2. Utilze o diretório `.envs` para atualizar suas variáveis de ambiente e configuração django.
@@ -52,6 +55,14 @@ make up
 **Acesse o projeto em:**
 
 [http://localhost:8000](http://localhost:8000)
+
+**Acesse base de dados com pgAdmin:**
+
+[http://localhost:5050](http://localhost:5050)
+```
+Email: wenderson@wanzeller.com.br
+Senha: password
+```
 
 ## Parar o Projeto
 Execute o comando no diretório raiz do projeto:
