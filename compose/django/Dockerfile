@@ -52,5 +52,7 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 RUN pip cache purge
 
 # CMD will run when this dockerfile is running
-CMD ["sh", "-c", "python manage.py collectstatic --no-input; python manage.py migrate; gunicorn setup.wsgi -b 0.0.0.0:8000"]
+CMD ["sh", "-c", "python manage.py collectstatic --no-input; python manage.py migrate; gunicorn --bind 0.0.0.0:8000 --reload setup.wsgi"]
+
+#CMD ["sh", "-c", "python manage.py collectstatic --no-input; python manage.py migrate; gunicorn setup.wsgi -b 0.0.0.0:8000"] 
 #CMD ["sh", "-c", "python manage.py collectstatic --no-input; python manage.py migrate; gunicorn mydjango.wsgi -b 0.0.0.0:8000 & celery --app myapp.tasks worker --loglevel=INFO"]
