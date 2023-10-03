@@ -1,4 +1,4 @@
-# Setup Docker Para Projetos Django com Nginx, Gunicorn, Redis e Postgresql usando Docker:
+# Setup Docker Para Projeto Django com Nginx, Gunicorn, Redis e Postgresql:
 Por [Wenderson Wanzeller](https://www.linkedin.com/in/wenderson-wanzeller/)
 
 ## Sobre o projeto
@@ -19,7 +19,7 @@ Remova o versionamento do repositório:
 ```sh
 rm -rf .git/
 ```
-*Crie e ative um ambiente virtual local:
+*Crie um ambiente virtual local (**apenas uma vez na instalação do projeto**):
   - **Linux:** 
     ```sh
     python3 -m venv .venv
@@ -28,28 +28,25 @@ rm -rf .git/
     ```
     python -m venv .venv
     ```
-
-  Para ativar o ambiente virtual, simplesmente execute:
+*Para ativar o ambiente virtual, simplesmente execute (**sempre que for iniciar o projeto**):
   - **Linux:** 
-    ```sh
+    ```
     source .venv/bin/activate
     ```
   - **Windows:**
-    ```cmd
+    ```
     .venv\Scripts\activate
-    ``````
-
-Execute o comando:
-```sh
-make up
-```
-Execute o comando:
+Execute o comando (**na primeira vez e sempre que atualizar o docker-compose**):
 ```sh
 make build
 ```
+Execute o comando (**na primeira vez e sempre que for iniciar o projeto**):
+```sh
+make up
+```
 
-## Parar projeto
-Execute o comando:
+## Parar o Projeto
+Execute o comando no diretório raiz do projeto:
 ```sh
 docker-compose down
 ```
