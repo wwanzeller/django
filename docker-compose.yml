@@ -1,0 +1,73 @@
+version: "3"
+
+services:
+  nginx:
+    image: nginx:alpine
+    container_name: django-nginx
+    ports:
+      - "8000:8000" # Encaminhe a porta 8000 do host para o contêiner Nginx
+    volumes:
+      - ./src:/src # Mapeie o código-fonte para o contêiner Nginx
+      - ./config/nginx:/etc/nginx/conf.d # Mapeie a configuração do Nginx
+    depends_on:
+      - web # Espere o serviço "web" estar pronto antes de iniciar o Nginx
+    networks:
+      - wanzeller # Use a rede personalizada "wanzeller"
+
+  web:
+    build:
+      context: .
+      dockerfile: compose/django/Dockerfile
+    container_name: django-web
+    depends_on:
+      - db # Espere o serviço "db" estar pronto antes de iniciar o aplicativo Django
+    volumes:
+      - ./src:/src # Mapeie o código-fonte para o contêiner Django
+    expose:
+      - "8000" # Exponha a porta 8000 internamente
+    env_file:
+      - ./.envs/.django # Configure as variáveis de ambiente a partir deste arquivo
+    networks:
+      - wanzeller # Use a rede personalizada "wanzeller"
+
+  db:
+    image: postgres:latest
+    container_name: django-postgres
+    env_file:
+      - ./.envs/.postgres # Configure as variáveis de ambiente a partir deste arquivo
+    volumes:
+      - local_postgres_data:/var/lib/postgresql/data # Use o volume nomeado para persistência de dados
+    networks:
+      - wanzeller # Use a rede personalizada "wanzeller"
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: django-pgadmin
+    ports:
+      - "5050:80" # Encaminhe a porta 5050 do host para o contêiner pgAdmin
+    expose:
+      - 5050 # Exponha a porta 5050 internamente
+    depends_on:
+      - db # Espere o serviço "db" estar pronto antes de iniciar o pgAdmin
+    env_file:
+      - ./.envs/.pgadmin # Configure as variáveis de ambiente a partir deste arquivo
+    networks:
+      - wanzeller # Use a rede personalizada "wanzeller"
+
+  redis:
+    image: redis:alpine
+    container_name: django-redis
+    depends_on:
+      - db # Espere o serviço "db" estar pronto antes de iniciar o Redis
+    ports:
+      - "6379:6379" # Encaminhe a porta 6379 do host para o contêiner Redis
+    networks:
+      - wanzeller # Use a rede personalizada "wanzeller"
+
+volumes:
+  local_postgres_data:
+    # Volume para persistência de dados do PostgreSQL
+
+networks:
+  wanzeller:
+    driver: bridge # Use o driver de rede "bridge" para a rede personalizada "wanzeller"
