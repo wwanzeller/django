@@ -3,14 +3,46 @@ Por [Wenderson Wanzeller](https://www.linkedin.com/in/wenderson-wanzeller/)
 
 ## Sobre o projeto
 1. Um projdeto Django, versão 4.2.5, chamado `setup` está disponível no diretório `src`. 
-2. Utilze o diretório [**`.envs`**] para atualizar suas variáveis de ambiente e configuração django.
+2. Utilze o diretório **`.envs`** para atualizar suas variáveis de ambiente e configuração django.
+3. Recomenda-se utilizar um abimente virtual em sua máquina local:
+   
+   Para criar o ambiente virtual, simplesmente execute:
+   - **Linux:** 
+     ```
+     python3 -m venv .venv
+     source .venv/bin/activate
+     ```
+   - **Windows:**
+     ```
+     python -m venv .venv
+     .venv\Scripts\activate
+     ```
+
+   Para ativar o ambiente virtual, simplesmente execute:
+   - **Linux:** 
+     ```
+     source .venv/bin/activate
+     ```
+   - **Windows:**
+     ```
+     .venv\Scripts\activate
+     ```
+
+   Para desativar o ambiente virtual ao parar o projeto, simplesmente execute:
+   - **Linux:**
+     ```
+     deactivate
+     ```
+   - **Windows:**
+     ```
+     .venv\Scripts\deactivate
+     ```
 
 ## Instalação Básica
 Clone o repositório de setup:
 ```sh
 git clone https://github.com/wwanzeller/django.git meu-sistema
 ```
-
 Entre no repositorio:
 ```sh
 cd meu-sistema/
