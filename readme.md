@@ -1,4 +1,4 @@
-# Setup Docker Para Projeto Django com Nginx, Gunicorn, Redis e Postgresql:
+# Setup Docker Para Projeto Django com Nginx, Gunicorn, Redis, Postgresql e pgAdmin:
 Por [Wenderson Wanzeller](https://www.linkedin.com/in/wenderson-wanzeller/)
 
 Setup de instalação do framwork django, na vesão 4.2.5, utilizando Docker com Nginx, Gunicorn, Redis e Postgresql e pgAdmin.
