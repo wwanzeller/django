@@ -48,7 +48,6 @@ make up
 
 [http://localhost:8000](http://localhost:8000)
 
-
 ## Parar o Projeto
 Execute o comando no diretório raiz do projeto:
 ```sh
