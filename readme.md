@@ -1,9 +1,9 @@
-# Setup Docker Para Projetos django com Nginx, Gunicorn, Redis e Postgresql usando Docker:
+# Setup Docker Para Projetos Django com Nginx, Gunicorn, Redis e Postgresql usando Docker:
 Por [Wenderson Wanzeller](https://www.linkedin.com/in/wenderson-wanzeller/)
 
 ## Sobre o projeto
 1. Um projdeto Django, versão 4.2.5, chamado `setup` está disponível no diretório `src`. 
-2. Utilze o diretório **`.envs`** para atualizar suas variáveis de ambiente e configuração django.
+2. Utilze o diretório `.envs` para atualizar suas variáveis de ambiente e configuração django.
 3. Recomenda-se utilizar um abimente virtual em sua máquina local:
    
    Para criar o ambiente virtual, simplesmente execute:
@@ -37,7 +37,7 @@ Por [Wenderson Wanzeller](https://www.linkedin.com/in/wenderson-wanzeller/)
      ```
 
 ## Instalação Básica
-Clone o repositório de setup:
+Clone o repositório de setup (substitua `meu-sistema` pelo `nome-seu-projeto`):
 ```sh
 git clone https://github.com/wwanzeller/django.git meu-sistema
 ```
@@ -76,8 +76,8 @@ Você pode rodar os comandos abaixo para utilizar este projeto:
 14. `make log-nginx` para acessar os logs do contêiner nginx.
 15. `make restart` para reiniciar os contêineres.
 
-## Licensa
-[MIT](https://github.com/wwanzeller/docker/blob/master/LICENSE).
-
 ## Contribuir
 Sinta-se à vontade para fazer um fork e criar um pull request (PR).
+
+## Licensa
+[MIT](https://github.com/wwanzeller/docker/blob/master/LICENSE).
