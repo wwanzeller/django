@@ -37,17 +37,9 @@ rm -rf .git/
     ```
     .venv\Scripts\activate
 
-Entre no diretório src:
-```sh
-cd src/
-```
 Instale localmente os pacotes do python:
 ```sh
-pip install -r requirements.pip
-```
-Volte ao diretório principal do projeto:
-```sh
-cd ..
+pip install -r ./src/requirements.pip
 ```
 Execute o comando (**na primeira vez e sempre que instalar um pacote ou atualizar o docker-compose**):
 ```sh
