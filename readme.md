@@ -13,7 +13,7 @@ git clone https://github.com/wwanzeller/django.git meu-sistema
 ```
 Entre no repositorio:
 ```sh
-cd meu-sistema/
+cd nome-seu-projeto/
 ```
 Remova o versionamento do repositório:
 ```sh
