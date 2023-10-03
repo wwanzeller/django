@@ -45,9 +45,9 @@ Execute o comando (**na primeira vez e sempre que for iniciar o projeto**):
 make up
 ```
 **Acesse o projeto em:**
-```sh 
+
 [http://localhost:8000](http://localhost:8000)
-```
+
 ## Parar o Projeto
 Execute o comando no diretório raiz do projeto:
 ```sh
