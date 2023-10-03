@@ -10,12 +10,10 @@ Por [Wenderson Wanzeller](https://www.linkedin.com/in/wenderson-wanzeller/)
    - **Linux:** 
      ```
      python3 -m venv .venv
-     source .venv/bin/activate
      ```
    - **Windows:**
      ```
      python -m venv .venv
-     .venv\Scripts\activate
      ```
 
    Para ativar o ambiente virtual, simplesmente execute:
